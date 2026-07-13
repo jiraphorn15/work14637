@@ -1,26 +1,226 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>ประวัติส่วนตัว</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body bgcolor="#f48fb1">
-    <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="projects.html">ผลงาน</a>
-        <a href="contact.html">ช่องทางการติดต่อ</a>
-    </nav>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติส่วนตัว</title>
 
-    <div class="container">
-        <h1>ประวัติส่วนตัว (Profile)</h1>
-        <img src="image/unnamed.jpg">
-        
-        <p><strong>ชื่อ-นามสกุล:</strong> นางสาว จิราพร เอมโอด</p>
-        <p><strong>ทักษะความสามารถ (Skills):</strong> พูดภาษาอังกฤษ ตัดต่อวิดีโอ</p>
-        <p><strong>งานอดิเรก:</strong> อ่านหนังสือ ฟังเพลง เล่นกับสัตว์เลี้ยง</p>
-    </div>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Itim',cursive;
+}
+
+body{
+    background:linear-gradient(135deg,#FFD6E8,#FFF5BA,#D6F8FF);
+    background-size:400% 400%;
+    animation:bgMove 12s infinite alternate;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+header{
+    width:100%;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+}
+
+nav{
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:15px 30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+nav a{
+    text-decoration:none;
+    color:#ff4f8b;
+    margin:0 12px;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:white;
+    background:#ff9ecb;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.container{
+    width:90%;
+    max-width:850px;
+    margin:30px auto;
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:6px solid white;
+    object-fit:cover;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+h1{
+    margin-top:20px;
+    color:#ff4f8b;
+}
+
+.info{
+    margin-top:25px;
+    text-align:left;
+}
+
+.info p{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    margin:12px 0;
+    color:#555;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+h2{
+    color:#ff4f8b;
+    margin-top:30px;
+}
+
+ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+ul li{
+    background:#fff;
+    margin:10px 0;
+    padding:12px;
+    border-radius:15px;
+    color:#555;
+}
+
+.heart{
+    position:fixed;
+    color:pink;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="index.html">🏠 หน้าแรก</a>
+<a href="profile.html">👧 ประวัติส่วนตัว</a>
+<a href="education.html">🎓 ประวัติการศึกษา</a>
+<a href="portfolio.html">💼 ผลงาน</a>
+<a href="contact.html">📞 ติดต่อ</a>
+</nav>
+</header>
+
+<div class="container">
+
+<img src="profile.jpg" alt="รูปโปรไฟล์">
+
+<h1>ชื่อ - นามสกุล</h1>
+
+<p style="margin-top:10px;color:#666;">
+นักเรียน | Web Portfolio
+</p>
+
+<div class="info">
+
+<p><b>👤 ชื่อ:</b> หนูแดง</p>
+
+<p><b>🎂 วันเกิด:</b> 06/06/2551</p>
+
+<p><b>🏠 ที่อยู่:</b> จังหวัดชลบุรี อำเภอพานทอง ตำบลหนองตำลึง</p>
+
+<p><b>📚 โรงเรียน:</b> โรงเรียนพานทอง</p>
+
+<p><b>❤️ งานอดิเรก:</b> ฟังเพลง เล่นเกม ดูหนัง อ่านหนังสือ</p>
+
+<p><b>🌟 ความสามารถพิเศษ:</b> ออกแบบ Canva เขียนเว็บไซต์ HTML</p>
+
+</div>
+
+<h2>💖 คติประจำใจ</h2>
+
+<ul>
+<li>"ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น"</li>
+</ul>
+
+</div>
+
+<footer>
+🌸 My Portfolio | Made with Love 💖
+</footer>
+
+<script>
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(createHeart,500);
+
+</script>
+
 </body>
 </html>

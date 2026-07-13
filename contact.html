@@ -1,25 +1,294 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>ช่องทางการติดต่อ</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body bgcolor="#ede7f6">
-    <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="projects.html">ผลงาน</a>
-        <a href="contact.html">ช่องทางการติดต่อ</a>
-    </nav>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ช่องทางการติดต่อ</title>
 
-    <div class="container">
-        <h1>ช่องทางการติดต่อ (Contact)</h1>
-        <p>หากสนใจหรือต้องการข้อมูลเพิ่มเติม สามารถติดต่อฉันได้ทางช่องทางเหล่านี้ค่ะ:</p>
-        
-        <div class="contact-item">📧 <strong>อีเมล:</strong> sawatdeex112@gmail.com</div>
-        <div class="contact-item">📱 <strong>เบอร์โทรศัพท์:</strong> 099-048-6175</div>
-            </div>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Itim',cursive;
+}
+
+body{
+    background:linear-gradient(135deg,#FFD6E8,#FFF5BA,#D6F8FF);
+    background-size:400% 400%;
+    animation:bgMove 12s infinite alternate;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+header{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+nav{
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    padding:15px 30px;
+    border-radius:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+nav a{
+    text-decoration:none;
+    color:#ff4f8b;
+    margin:0 10px;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#ff9ecb;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    color:#ff4f8b;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    color:#ff4f8b;
+    margin-bottom:10px;
+}
+
+.card p,
+.card a{
+    color:#555;
+    text-decoration:none;
+    word-break:break-word;
+}
+
+.card a:hover{
+    color:#ff4f8b;
+}
+
+.form-box{
+    margin-top:40px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.form-box h2{
+    color:#ff4f8b;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:12px;
+    background:#f8f8f8;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:20px;
+    background:#ff9ecb;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff4f8b;
+}
+
+.heart{
+    position:fixed;
+    color:pink;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<nav>
+<a href="index.html">🏠 หน้าแรก</a>
+<a href="profile.html">👧 ประวัติส่วนตัว</a>
+<a href="education.html">🎓 ประวัติการศึกษา</a>
+<a href="portfolio.html">💼 ผลงาน</a>
+<a href="contact.html">📞 ติดต่อ</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>📞 ช่องทางการติดต่อ</h1>
+
+<p class="subtitle">
+สามารถติดต่อฉันได้ผ่านช่องทางด้านล่าง 💖
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📧</div>
+<h2>Email</h2>
+<p>sawatdeex112@gmail.com</p>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h2>เบอร์โทรศัพท์</h2>
+<p>099-048-6175</p>
+</div>
+
+<div class="card">
+<div class="icon">📘</div>
+<h2>Facebook</h2>
+<p><a href="#">https://facebook.com/Jiraz</a></p>
+</div>
+
+<div class="card">
+<div class="icon">📷</div>
+<h2>Instagram</h2>
+<p><a href="#">https://instagram.com/nudang._</a></p>
+</div>
+
+</div>
+
+<div class="form-box">
+
+<h2>💌 ส่งข้อความถึงฉัน</h2>
+
+<form>
+
+<input type="text" placeholder="ชื่อของคุณ">
+
+<input type="email" placeholder="อีเมล">
+
+<textarea rows="5" placeholder="ข้อความ"></textarea>
+
+<button type="submit">💖 ส่งข้อความ</button>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+🌸 My Portfolio | Made with Love 💖
+</footer>
+
+<script>
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*20)+"px";
+
+heart.style.animationDuration=(5+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(createHeart,500);
+
+</script>
+
 </body>
 </html>

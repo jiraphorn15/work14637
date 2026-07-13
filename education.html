@@ -1,31 +1,229 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>ประวัติการศึกษา</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body bgcolor="#ede7f6">
-    <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="projects.html">ผลงาน</a>
-        <a href="contact.html">ช่องทางการติดต่อ</a>
-    </nav>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติการศึกษา</title>
 
-    <div class="container">
-        <h1>ประวัติการศึกษา (Education)</h1>
-        <ul>
-            <li><strong>ระดับชั้นอนุบาล:</strong>โรงเรียนชุมชนวัดหนองตำลึง</li>
-            <img src="image/IMG_5283 (1).jpeg">
-            <li><strong>ระดับชั้นประถมศึกษา:</strong> โรงเรียนชุมชนวัดหนองตำลึง</li>
-            <img src="image/IMG_5283 (1).jpeg">
-            <li><strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong> โรงเรียนพานทอง</li>
-            <img src="image/images.jfif">
-            <li><strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong> โรงเรียนพานทอง</li>
-            <img src="image/images.jfif">
-        </ul>
-    </div>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Itim',cursive;
+}
+
+body{
+    background:linear-gradient(135deg,#FFD6E8,#FFF5BA,#D6F8FF);
+    background-size:400% 400%;
+    animation:bgMove 12s infinite alternate;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+header{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+nav{
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    padding:15px 30px;
+    border-radius:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+nav a{
+    text-decoration:none;
+    color:#ff4f8b;
+    margin:0 10px;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#ff9ecb;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    color:#ff4f8b;
+    margin-bottom:35px;
+}
+
+.timeline{
+    position:relative;
+    margin-left:20px;
+    border-left:5px solid #ff9ecb;
+    padding-left:35px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    position:relative;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card::before{
+    content:"🎓";
+    position:absolute;
+    left:-52px;
+    top:20px;
+    background:white;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+.card h2{
+    color:#ff4f8b;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.7;
+}
+
+.heart{
+    position:fixed;
+    color:pink;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="index.html">🏠 หน้าแรก</a>
+<a href="profile.html">👧 ประวัติส่วนตัว</a>
+<a href="education.html">🎓 ประวัติการศึกษา</a>
+<a href="portfolio.html">💼 ผลงาน</a>
+<a href="contact.html">📞 ติดต่อ</a>
+</nav>
+</header>
+
+<div class="container">
+
+<h1>📚 ประวัติการศึกษา</h1>
+
+<div class="timeline">
+
+<div class="card">
+<h2>ระดับประถมศึกษา</h2>
+<p>
+🏫 โรงเรียนชุมชนวัดหนองตำลึง<br>
+</p>
+</div>
+
+<div class="card">
+<h2>ระดับมัธยมศึกษาตอนต้น</h2>
+<p>
+🏫 โรงเรียนพานทอง<br>
+</p>
+</div>
+
+<div class="card">
+<h2>ระดับมัธยมศึกษาตอนปลาย/h2>
+<p>
+🏫 โรงเรียนพานทอง<br>
+</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+🌸 My Portfolio | Made with Love 💖
+</footer>
+
+<script>
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*20)+"px";
+
+heart.style.animationDuration=(5+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(createHeart,500);
+
+</script>
+
 </body>
 </html>

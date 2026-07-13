@@ -1,33 +1,286 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>ผลงานของฉัน</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผลงาน</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Itim',cursive;
+}
+
+body{
+    background:linear-gradient(135deg,#FFD6E8,#FFF5BA,#D6F8FF);
+    background-size:400% 400%;
+    animation:bgMove 12s infinite alternate;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+header{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+nav{
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    padding:15px 30px;
+    border-radius:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+nav a{
+    text-decoration:none;
+    color:#ff4f8b;
+    margin:0 10px;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#ff9ecb;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    color:#ff4f8b;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:35px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h2{
+    color:#ff4f8b;
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#555;
+    line-height:1.6;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:15px;
+    background:#FFD6E8;
+    color:#ff4f8b;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.heart{
+    position:fixed;
+    color:pink;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+}
+</style>
+
 </head>
 <body>
-    <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="projects.html">ผลงาน</a>
-        <a href="contact.html">ช่องทางการติดต่อ</a>
-    </nav>
 
-    <div class="container">
-        <h1>ผลงานและโปรเจกต์ (My Projects)</h1>
-        
-        <div class="project-card">
-            <img src="images/project1.jpg" alt="รูปภาพผลงาน 1" class="project-img">
-            <h3>1. โปรเจกต์พัฒนาเว็บไซต์เบื้องต้น</h3>
-            <p>รายละเอียดงานชิ้นที่ 1 อธิบายแนวคิดและเครื่องมือที่ใช้ในการพัฒนา</p>
-        </div>
+<header>
 
-        <div class="project-card">
-            <img src="images/project2.jpg" alt="รูปภาพผลงาน 2" class="project-img">
-            <h3>2. กิจกรรม/เกียรติบัตร</h3>
-            <p>อธิบายกิจกรรมหรืองานประกวดแข่งขันที่เคยเข้าร่วม</p>
-        </div>
-    </div>
+<nav>
+<a href="index.html">🏠 หน้าแรก</a>
+<a href="profile.html">👧 ประวัติส่วนตัว</a>
+<a href="education.html">🎓 ประวัติการศึกษา</a>
+<a href="portfolio.html">💼 ผลงาน</a>
+<a href="contact.html">📞 ติดต่อ</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>🏆 ผลงานของฉัน</h1>
+
+<p class="subtitle">
+รวมผลงาน กิจกรรม และเกียรติบัตรที่เคยได้รับ
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="work1.jpg" alt="ผลงานที่ 1">
+
+<div class="content">
+<h2>🏅 การแข่งขันศิลปหัตถกรรม</h2>
+<p>
+เข้าร่วมการแข่งขันศิลปหัตถกรรมระดับโรงเรียน/เขตพื้นที่
+เพื่อพัฒนาทักษะและความคิดสร้างสรรค์
+</p>
+
+<span class="badge">Certificate</span>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="work2.jpg" alt="ผลงานที่ 2">
+
+<div class="content">
+
+<h2>🔬 กิจกรรมวันวิทยาศาสตร์</h2>
+
+<p>
+เข้าร่วมกิจกรรมและจัดแสดงผลงานในวันวิทยาศาสตร์ของโรงเรียน
+</p>
+
+<span class="badge">Science</span>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="work3.jpg" alt="ผลงานที่ 3">
+
+<div class="content">
+
+<h2>🎨 ผลงานออกแบบ</h2>
+
+<p>
+ออกแบบโปสเตอร์ อินโฟกราฟิก และสื่อประชาสัมพันธ์ด้วย Canva
+</p>
+
+<span class="badge">Design</span>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="work4.jpg" alt="ผลงานที่ 4">
+
+<div class="content">
+
+<h2>💻 เว็บไซต์ Portfolio</h2>
+
+<p>
+สร้างเว็บไซต์ Portfolio ด้วย HTML และ CSS เพื่อรวบรวมข้อมูลและผลงาน
+</p>
+
+<span class="badge">HTML & CSS</span>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+🌸 My Portfolio | Made with Love 💖
+</footer>
+
+<script>
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*20)+"px";
+
+heart.style.animationDuration=(5+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(createHeart,500);
+
+</script>
+
 </body>
 </html>

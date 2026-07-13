@@ -1,23 +1,162 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - หน้าแรก</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Home</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Itim',cursive;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#FFD6E8,#FFF5BA,#D6F8FF);
+    background-size:400% 400%;
+    animation:bgMove 12s infinite alternate;
+}
+
+@keyframes bgMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+h1{
+    color:#ff4f8b;
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+p{
+    color:#555;
+    margin-bottom:30px;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.menu a{
+    text-decoration:none;
+    background:#fff;
+    color:#ff4f8b;
+    padding:18px;
+    border-radius:20px;
+    font-size:20px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.menu a:hover{
+    transform:translateY(-8px) scale(1.05);
+    background:#ff9ecb;
+    color:white;
+}
+
+.heart{
+    position:absolute;
+    color:pink;
+    font-size:20px;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) scale(.5);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120px) scale(1.3);
+opacity:0;
+}
+}
+
+footer{
+    margin-top:30px;
+    color:#777;
+}
+</style>
 </head>
-<body bgcolor="#fce4ec">
-    <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="proflie.html">ประวัติส่วนตัว</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="projects.html">ผลงาน</a>
-        <a href="contact.html">ช่องทางการติดต่อ</a>
-    </nav>
-<img src="image/f3ab1dc2ccc4639fd329432e033d89">
-    <div class="container">
-        <h1>ยินดีต้อนรับสู่ พอร์ตโฟลิโอของฉัน</h1>
-        <p>สวัสดีครับ/ค่ะ เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติ ผลงาน ทักษะ และช่องทางการติดต่อของฉัน สามารถเลือกดูข้อมูลแต่ละส่วนได้ที่แถบเมนูด้านบน</p>
-    </div>
+
+<body>
+
+<div class="container">
+
+<h1>🌸 My Portfolio 🌸</h1>
+
+<p>ยินดีต้อนรับเข้าสู่เว็บไซต์ของฉัน</p>
+
+<div class="menu">
+
+<a href="profile.html">👧 ประวัติส่วนตัว</a>
+
+<a href="education.html">🎓 ประวัติการศึกษา</a>
+
+<a href="portfolio.html">💼 ผลงาน</a>
+
+<a href="contact.html">📞 ช่องทางการติดต่อ</a>
+
+</div>
+
+<footer>
+💖 Made with Love 💖
+</footer>
+
+</div>
+
+<script>
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+
+}
+
+setInterval(createHeart,400);
+
+</script>
+
 </body>
 </html>
